@@ -166,7 +166,7 @@ body {
             padding: 4rem;
             gap: 12rem;
             border-radius: 2rem;
-            width: 100%;
+            width: 475px;
             height: 100%;
             #tip-amount {
                 margin-bottom: 2rem;
@@ -176,7 +176,7 @@ body {
                 flex: row;
                 align-items: center;
                 justify-content: space-between;
-                gap: 8rem;
+                gap: 1rem;
                 .amount-total {
                     p{
                         &:nth-child(1) {

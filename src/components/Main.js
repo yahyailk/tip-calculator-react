@@ -38,7 +38,7 @@ const Main = () => {
                     <p>Bill</p>
                     <form className="inputs">
                         <img src={dollar} alt="" />
-                        <input value={bill} onChange={(e) => setBill(e.target.value)} className="input" placeholder="0"/>
+                        <input value={bill} onChange={(e) => setBill(e.target.value)} className="input" placeholder="0" maxLength={6}/>
                     </form>
                     </div>
                     <div id="select-tip">
@@ -48,7 +48,7 @@ const Main = () => {
                             discounts.map((discount,index) => <button key={index} className="tip-percentage" onClick={(e) => setTip(e.target.innerText)}>{discount}%</button>)
                         }
                         <form className="inputs">
-                            <input value={tip} onChange={(e) => setTip(e.target.value)} className="input tip-percentage" />
+                            <input value={tip} onChange={(e) => setTip(e.target.value)} className="input tip-percentage" maxLength={3}/>
                         </form>
                     </div>
                     </div>
@@ -59,26 +59,26 @@ const Main = () => {
                     </div>
                     <form className='inputs'>
                         <img src={person} alt="" />
-                        <input value={people} onChange={(e) => setPeople(e.target.value)} className="input" />
+                        <input value={people} onChange={(e) => setPeople(e.target.value)} className="input" maxLength={2}/>
                     </form>
                     </div>
                 </div>
                 <div id="calculate-side">
                     <div>
-                    <div id="tip-amount" className="calculate-side-header">
-                        <div className="amount-total">
-                        <p>Tip Amount</p>
-                        <p>/ person</p>
+                        <div id="tip-amount" className="calculate-side-header">
+                            <div className="amount-total">
+                            <p>Tip Amount</p>
+                            <p>/ person</p>
+                            </div>
+                            <p className="price" id="tip_amount">${perPerson}</p>
                         </div>
-                        <p className="price" id="tip_amount">${perPerson}</p>
-                    </div>
-                    <div id="total" className="calculate-side-header">
-                        <div className="amount-total">
-                        <p>Total</p>
-                        <p>/ person</p>
+                        <div id="total" className="calculate-side-header">
+                            <div className="amount-total">
+                            <p>Total</p>
+                            <p>/ person</p>
+                            </div>
+                            <p className="price" id="total">${tipAmount}</p>
                         </div>
-                        <p className="price" id="total">${tipAmount}</p>
-                    </div>
                     </div>
                     <button id="reset" onClick={resetAll}>RESET</button>
                 </div>
